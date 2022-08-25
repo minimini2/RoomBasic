@@ -1,5 +1,6 @@
 package com.example.roombasic;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -23,15 +24,14 @@ public interface WordDao {
     void deleteAllWords();
 
     @Query("SELECT * FROM WORD ORDER BY ID DESC")
-    List<Word> getAllWords();
+//    List<Word> getAllWords();
+    //LiveData:系统自动放到副线程上执行
+    LiveData<List<Word>> getAllWordsLive();
 
     @Query("SELECT * FROM WORD where id= :id")
     Word selectById(int id);
 
     @Query("UPDATE WORD set english_word = :word where id= :id")
     void changeWordById(String word,int id);
-
-    @Query("UPDATE WORD set english_word = :word where id= :id")
-    void changeWordById2(String word,int id);
 
 }

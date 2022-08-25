@@ -55,15 +55,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="clear"
-        app:layout_constraintBottom_toBottomOf="@+id/query"
+        app:layout_constraintBottom_toBottomOf="@+id/deleteAll"
         app:layout_constraintStart_toStartOf="@+id/insert" />
 
     <Button
-        android:id="@+id/query"
+        android:id="@+id/deleteAll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="query"
+        android:text="deleteAll"
         app:layout_constraintStart_toStartOf="@+id/updata"
         app:layout_constraintTop_toBottomOf="@+id/updata" />
 
